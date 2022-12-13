@@ -47,7 +47,7 @@ A bad implement of paint function
 A bad for loop which cause the chessboard response very slow
 ``` java
 public void paint(){
-    for (int i = 0; i < 64; i ++) {
+    for (int i = 0; i < 16*16; i ++) {
         ImageIcon icon = new ImageIcon();
         if(state[i] == -1){
             continue;
@@ -63,3 +63,18 @@ public void paint(){
     this.repaint();
 }
 ```
+
+Go logic
+- check if the states did appear before ban it
+- on update 
+  - check side block color
+  - if same(they are connected block qi1 + qi2 - 2 => both & connect to the same union)
+  - else (their qi minus 1 => both)
+
+Reference
+A marking method using alpha-beta pruning
+https://blog.csdn.net/u011587401/article/details/50877828
+
+update: 11/12
+make chessboard large
+(considering adding a go game)

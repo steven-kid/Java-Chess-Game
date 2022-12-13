@@ -5,24 +5,33 @@ import java.awt.event.ActionListener;
 import java.awt.event.MouseEvent;
 import java.awt.event.MouseListener;
 
-public class normalGame {
+public class GoNormalGame {
     private static int currentPlayer = 0;
-
     private static boolean end = false;
 
-    private static chessBoard chess = new chessBoard("Normal Game mode\uD83E\uDD3A");
+    private GoGameVaildator validator = null;
+
+    private int[] setFather = new int[16 * 16];
+
+    private int[] setSize = new int[16*16];
+
+    private static chessBoard chess = null;
+
+    // been eaten => switch back to none
+    public void render(){
+        for (int i = 0; i < 16*16; i++) {
+            int tempState = chess.state[i];
+            // no chessman yet
+            if(tempState == -1)
+                continue;
+        }
+    }
     private MouseListener hover = new MouseListener() {
-        public void mouseClicked(MouseEvent e) {
+        public void mouseClicked(MouseEvent e) {}
 
-        }
+        public void mousePressed(MouseEvent e) {}
 
-        public void mousePressed(MouseEvent e) {
-
-        }
-
-        public void mouseReleased(MouseEvent e) {
-
-        }
+        public void mouseReleased(MouseEvent e) {}
 
         public void mouseEntered(MouseEvent e){
             JButton temp = (JButton) e.getSource();
@@ -69,7 +78,7 @@ public class normalGame {
                 icon = new ImageIcon(temp1);
                 chess.buttons[tempIndex].setIcon(icon);
                 chess.repaint();
-                if (checkEndGame.checkState(chess)) {
+                if (GobangCheckEndGame.checkState(chess)){
                     JOptionPane.showMessageDialog(null, "Player" + (currentPlayer + 1) + " win the game");
                     chess.Jtitle.setText("Player" + (currentPlayer + 1) + " win the game");
                     end = true;
@@ -83,12 +92,19 @@ public class normalGame {
         }
     };
 
-    public normalGame(){
+    public GoNormalGame(){
+        end = false;
+        currentPlayer = 0;
+        chess = new chessBoard("Normal Game mode\uD83E\uDD3A");
         chess.Jtitle.setText("Player 1's turn\uD83D\uDC15");
-        for (int i = 0; i < 64; i ++) {
+        validator = new GoGameVaildator();
+        for (int i = 0; i < 16*16; i ++) {
+            // initialize union
+            setFather[i] = 0;
+            // block size 1
+            setSize[i] = 1;
             chess.buttons[i].addActionListener(click);
             chess.buttons[i].addMouseListener(hover);
         }
     }
 }
-

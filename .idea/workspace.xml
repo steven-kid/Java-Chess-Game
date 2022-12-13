@@ -4,26 +4,21 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="5e254d63-9b57-47f9-a437-ed4e18942f62" name="Changes" comment="">
-      <change afterPath="$PROJECT_DIR$/.gitignore" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/.idea/artifacts/chess_jar.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/.idea/inspectionProfiles/Project_Default.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/.idea/misc.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/.idea/modules.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/.idea/vcs.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/README.md" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/chess.iml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/Entrance.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/META-INF/MANIFEST.MF" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/Main.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/aiBrain.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/aiGame.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/checkEndGame.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/chessBoard.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/mouseAction.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/normalGame.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/static/emptynew.png" afterDir="false" />
+    <list default="true" id="5e254d63-9b57-47f9-a437-ed4e18942f62" name="Changes" comment="&quot;Expand chessboard size &amp; Adding go game logic&quot;">
+      <change afterPath="$PROJECT_DIR$/.idea/uiDesigner.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/GameEntrance.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/GoGameVaildator.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/GoNormalGame.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/README.md" beforeDir="false" afterPath="$PROJECT_DIR$/README.md" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/Entrance.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/GobangEntrance.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/Main.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/Main.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/aiBrain.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/GobangAiBrain.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/aiGame.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/GobangAiGame.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/checkEndGame.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/GobangCheckEndGame.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/chessBoard.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/chessBoard.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/mouseAction.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/mouseAction.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/normalGame.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/GobangNormalGame.java" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -51,26 +46,26 @@
     <option name="hideEmptyMiddlePackages" value="true" />
     <option name="showLibraryContents" value="true" />
   </component>
-  <component name="PropertiesComponent"><![CDATA[{
-  "keyToString": {
-    "ASKED_ADD_EXTERNAL_FILES": "true",
-    "RunOnceActivity.OpenProjectViewOnStart": "true",
-    "RunOnceActivity.ShowReadmeOnStart": "true",
-    "SHARE_PROJECT_CONFIGURATION_FILES": "true",
-    "WebServerToolWindowFactoryState": "false",
-    "jdk.selected.JAVA_MODULE": "openjdk-18",
-    "last_opened_file_path": "C:/Users/86159/Desktop/five-chess",
-    "node.js.detected.package.eslint": "true",
-    "node.js.detected.package.tslint": "true",
-    "node.js.selected.package.eslint": "(autodetect)",
-    "node.js.selected.package.tslint": "(autodetect)",
-    "nodejs_package_manager_path": "npm",
-    "project.structure.last.edited": "Artifacts",
-    "project.structure.proportion": "0.15",
-    "project.structure.side.proportion": "0.2",
-    "settings.editor.selected.configurable": "configurable.group.tools"
+  <component name="PropertiesComponent">{
+  &quot;keyToString&quot;: {
+    &quot;ASKED_ADD_EXTERNAL_FILES&quot;: &quot;true&quot;,
+    &quot;RunOnceActivity.OpenProjectViewOnStart&quot;: &quot;true&quot;,
+    &quot;RunOnceActivity.ShowReadmeOnStart&quot;: &quot;true&quot;,
+    &quot;SHARE_PROJECT_CONFIGURATION_FILES&quot;: &quot;true&quot;,
+    &quot;WebServerToolWindowFactoryState&quot;: &quot;false&quot;,
+    &quot;jdk.selected.JAVA_MODULE&quot;: &quot;openjdk-18&quot;,
+    &quot;last_opened_file_path&quot;: &quot;C:/Users/86159/Desktop/ch16&quot;,
+    &quot;node.js.detected.package.eslint&quot;: &quot;true&quot;,
+    &quot;node.js.detected.package.tslint&quot;: &quot;true&quot;,
+    &quot;node.js.selected.package.eslint&quot;: &quot;(autodetect)&quot;,
+    &quot;node.js.selected.package.tslint&quot;: &quot;(autodetect)&quot;,
+    &quot;nodejs_package_manager_path&quot;: &quot;npm&quot;,
+    &quot;project.structure.last.edited&quot;: &quot;Artifacts&quot;,
+    &quot;project.structure.proportion&quot;: &quot;0.15&quot;,
+    &quot;project.structure.side.proportion&quot;: &quot;0.2&quot;,
+    &quot;settings.editor.selected.configurable&quot;: &quot;preferences.pluginManager&quot;
   }
-}]]></component>
+}</component>
   <component name="RecentsManager">
     <key name="CopyFile.RECENT_KEYS">
       <recent name="C:\Users\86159\Desktop\chess\AI" />
@@ -80,8 +75,29 @@
     </key>
   </component>
   <component name="RunManager" selected="Application.Main">
-    <configuration name="Entrance" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
-      <option name="MAIN_CLASS_NAME" value="Entrance" />
+    <configuration name="GameEntrance (1)" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
+      <option name="MAIN_CLASS_NAME" value="GameEntrance" />
+      <module name="chess" />
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
+    <configuration name="GameEntrance" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
+      <option name="MAIN_CLASS_NAME" value="GameEntrance" />
+      <module name="chess" />
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
+    <configuration name="GobangAiGame" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
+      <option name="MAIN_CLASS_NAME" value="GobangAiGame" />
+      <module name="chess" />
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
+    <configuration name="GobangEntrance" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
+      <option name="MAIN_CLASS_NAME" value="GobangEntrance" />
       <module name="chess" />
       <method v="2">
         <option name="Make" enabled="true" />
@@ -94,34 +110,13 @@
         <option name="Make" enabled="true" />
       </method>
     </configuration>
-    <configuration name="aiGame" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
-      <option name="MAIN_CLASS_NAME" value="aiGame" />
-      <module name="chess" />
-      <method v="2">
-        <option name="Make" enabled="true" />
-      </method>
-    </configuration>
-    <configuration name="chessBoard" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
-      <option name="MAIN_CLASS_NAME" value="chessBoard" />
-      <module name="chess" />
-      <method v="2">
-        <option name="Make" enabled="true" />
-      </method>
-    </configuration>
-    <configuration name="normalGame" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
-      <option name="MAIN_CLASS_NAME" value="normalGame" />
-      <module name="chess" />
-      <method v="2">
-        <option name="Make" enabled="true" />
-      </method>
-    </configuration>
     <recent_temporary>
       <list>
         <item itemvalue="Application.Main" />
-        <item itemvalue="Application.Entrance" />
-        <item itemvalue="Application.aiGame" />
-        <item itemvalue="Application.normalGame" />
-        <item itemvalue="Application.chessBoard" />
+        <item itemvalue="Application.GameEntrance (1)" />
+        <item itemvalue="Application.GameEntrance" />
+        <item itemvalue="Application.GobangEntrance" />
+        <item itemvalue="Application.GobangAiGame" />
       </list>
     </recent_temporary>
   </component>
@@ -134,8 +129,34 @@
       <option name="presentableId" value="Default" />
       <updated>1670286440735</updated>
       <workItem from="1670286442446" duration="12762000" />
-      <workItem from="1670308225805" duration="24546000" />
+      <workItem from="1670308225805" duration="26438000" />
+      <workItem from="1670407160579" duration="278000" />
+      <workItem from="1670423804204" duration="350000" />
+      <workItem from="1670490712063" duration="751000" />
+      <workItem from="1670583887532" duration="795000" />
+      <workItem from="1670734999138" duration="107000" />
+      <workItem from="1670735117345" duration="66000" />
+      <workItem from="1670735193038" duration="270000" />
+      <workItem from="1670771583891" duration="2068000" />
+      <workItem from="1670832750722" duration="43000" />
+      <workItem from="1670843620538" duration="1614000" />
+      <workItem from="1670896318171" duration="13385000" />
     </task>
+    <task id="LOCAL-00001" summary="&quot;🤺&quot;">
+      <created>1670398164751</created>
+      <option name="number" value="00001" />
+      <option name="presentableId" value="LOCAL-00001" />
+      <option name="project" value="LOCAL" />
+      <updated>1670398164751</updated>
+    </task>
+    <task id="LOCAL-00002" summary="&quot;🤺&quot;">
+      <created>1670398431850</created>
+      <option name="number" value="00002" />
+      <option name="presentableId" value="LOCAL-00002" />
+      <option name="project" value="LOCAL" />
+      <updated>1670398431850</updated>
+    </task>
+    <option name="localTasksCounter" value="3" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -154,5 +175,8 @@
   </component>
   <component name="VcsManagerConfiguration">
     <option name="ADD_EXTERNAL_FILES_SILENTLY" value="true" />
+    <MESSAGE value="&quot;&quot;" />
+    <MESSAGE value="&quot;Expand chessboard size &amp; Adding go game logic&quot;" />
+    <option name="LAST_COMMIT_MESSAGE" value="&quot;Expand chessboard size &amp; Adding go game logic&quot;" />
   </component>
 </project>

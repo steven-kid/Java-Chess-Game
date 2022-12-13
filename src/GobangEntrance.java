@@ -7,7 +7,7 @@ import java.awt.event.ActionListener;
 import java.awt.event.MouseAdapter;
 import java.awt.event.MouseEvent;
 
-public class Entrance extends JFrame {
+public class GobangEntrance extends JFrame {
     JButton AIMode = new JButton("AI \uD83E\uDD16");
     JButton HumanMode = new JButton("HUMAN \uD83E\uDD3A");
 
@@ -23,14 +23,14 @@ public class Entrance extends JFrame {
     ActionListener human = new ActionListener() {
         @Override
         public void actionPerformed(ActionEvent e) {
-            new normalGame();
+            new GobangNormalGame();
         }
     };
 
     ActionListener ai = new ActionListener() {
         @Override
         public void actionPerformed(ActionEvent e) {
-            new aiGame();
+            new GobangAiGame();
         }
     };
 
@@ -39,17 +39,15 @@ public class Entrance extends JFrame {
         public void mouseEntered(MouseEvent e){
             JButton temp = (JButton) e.getSource();
             temp.setFont(fontBold);
-            temp.setBorder(borderThick);
         }
         @Override
         public void mouseExited(MouseEvent e) {
             JButton temp = (JButton) e.getSource();
             temp.setFont(font);
-            temp.setBorder(border);
         }
     };
 
-    public Entrance(){
+    public GobangEntrance(){
         AIMode.setFont(font);
         HumanMode.setFont(font);
         AIMode.addMouseListener(hover);
@@ -68,7 +66,7 @@ public class Entrance extends JFrame {
         mainPanel.setLayout(new BorderLayout());
         mainPanel.add(AIMode, BorderLayout.WEST);
         mainPanel.add(HumanMode, BorderLayout.EAST);
-        this.setTitle("Chess Game \uD83E\uDD77");
+        this.setTitle("Choose game mode \uD83E\uDD77");
         this.setContentPane(mainPanel);
         this.setSize(413, 300);
         this.setVisible(true);

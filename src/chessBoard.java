@@ -7,21 +7,22 @@ import java.text.AttributedCharacterIterator;
 import java.util.HashMap;
 
 public class chessBoard extends JFrame {
-    JButton[] buttons = new JButton[64];
+    public int size = 16;
+    JButton[] buttons = new JButton[size * size];
     JPanel infoDock = new JPanel();
 
     JLabel Jtitle =  new JLabel("test");
     JPanel chessPanel = new JPanel();
     JPanel mainPanel = new JPanel();
 
-    int [] state = new int[64];
+    int [] state = new int[size*size];
 
     public HashMap<JButton, Integer> btnToInt = new HashMap<JButton, Integer>();
 
     public chessBoard(String title){
         super(title);
-        chessPanel.setLayout(new GridLayout(8, 8));
-        for (int i = 0; i < 64; i ++)
+        chessPanel.setLayout(new GridLayout(16, 16));
+        for (int i = 0; i < size*size; i ++)
         {
             buttons[i] = new JButton();
             buttons[i].setPreferredSize(new Dimension(50,50));
@@ -40,7 +41,7 @@ public class chessBoard extends JFrame {
         // state[i] = -1 not visited yet
         // state[i] = 0 visited by player 0
         // state[i] = 1 visited by player 1
-        for (int i = 0; i < 64; i ++) {
+        for (int i = 0; i < size*size; i ++) {
             this.state[i] = -1;
             btnToInt.put(buttons[i], i);
         }
@@ -53,5 +54,6 @@ public class chessBoard extends JFrame {
         this.add(mainPanel);
         this.pack();
         this.setVisible(true);
+        this.setDefaultCloseOperation (JFrame.DISPOSE_ON_CLOSE);
     }
 }

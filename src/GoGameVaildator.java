@@ -3,9 +3,10 @@ import java.util.HashSet;
 
 public class GoGameVaildator {
     HashSet<int[]> set;
-    public boolean checkValid(int [] state, int place, int player){
-        state[place] = player;
-        return !set.contains(state);
+    public boolean checkValid(int[] state, int place, int player){
+        int[] newState = state.clone();
+        newState[place] = player;
+        return !set.contains(newState);
     }
     public void update(int [] state){
         set.add(state);

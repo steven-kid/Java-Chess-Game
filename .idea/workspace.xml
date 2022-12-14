@@ -5,20 +5,10 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="5e254d63-9b57-47f9-a437-ed4e18942f62" name="Changes" comment="&quot;Expand chessboard size &amp; Adding go game logic&quot;">
-      <change afterPath="$PROJECT_DIR$/.idea/uiDesigner.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/GameEntrance.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/GoGameVaildator.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/GoNormalGame.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/README.md" beforeDir="false" afterPath="$PROJECT_DIR$/README.md" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/Entrance.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/GobangEntrance.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/Main.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/Main.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/aiBrain.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/GobangAiBrain.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/aiGame.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/GobangAiGame.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/checkEndGame.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/GobangCheckEndGame.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/chessBoard.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/chessBoard.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/mouseAction.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/mouseAction.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/normalGame.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/GobangNormalGame.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/GameEntrance.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/GameEntrance.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/GoGameVaildator.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/GoGameVaildator.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/GoNormalGame.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/GoNormalGame.java" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -140,7 +130,8 @@
       <workItem from="1670771583891" duration="2068000" />
       <workItem from="1670832750722" duration="43000" />
       <workItem from="1670843620538" duration="1614000" />
-      <workItem from="1670896318171" duration="13385000" />
+      <workItem from="1670896318171" duration="16050000" />
+      <workItem from="1671013086867" duration="9615000" />
     </task>
     <task id="LOCAL-00001" summary="&quot;🤺&quot;">
       <created>1670398164751</created>
@@ -156,7 +147,14 @@
       <option name="project" value="LOCAL" />
       <updated>1670398431850</updated>
     </task>
-    <option name="localTasksCounter" value="3" />
+    <task id="LOCAL-00003" summary="&quot;Expand chessboard size &amp; Adding go game logic&quot;">
+      <created>1670923031638</created>
+      <option name="number" value="00003" />
+      <option name="presentableId" value="LOCAL-00003" />
+      <option name="project" value="LOCAL" />
+      <updated>1670923031638</updated>
+    </task>
+    <option name="localTasksCounter" value="4" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">

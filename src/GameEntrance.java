@@ -18,7 +18,7 @@ public class GameEntrance extends JFrame{
     ActionListener go = new ActionListener() {
         @Override
         public void actionPerformed(ActionEvent e) {
-            //new goEntrance();
+            new GoNormalGame();
         }
     };
 

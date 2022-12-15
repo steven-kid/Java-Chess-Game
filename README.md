@@ -1,19 +1,23 @@
 ### Chess Game🚩(Two mode)
 
 #### Feature
+- Go game
 - AI(based on pytorch) Player1 vs PC🤖
 - one on one(Player1 vs Player2)
 
 #### Java Classes
 - Start Frame
-  - (choose the mode)
+  - (choose the game)
+    - Go
+    - GoBang
+      - (choose the mode)
 - Chess Board(gui using swing framework)
   - set background image
   - set chessPiece 
 - Play Game
   - check end game🔚 return winner 🏅
   - add event listener on buttons
-  - communicate with ai(if on ai mode)
+  - calculate the score table(if on ai mode)
   - timer for play time🕔
 - Ai Frame
   - ui frame for AI mode 
@@ -71,6 +75,8 @@ Go logic
   - if same(they are connected block qi1 + qi2 - 2 => both & connect to the same union)
   - else (their qi minus 1 => both)
 
+
+
 Reference
 A marking method using alpha-beta pruning
 https://blog.csdn.net/u011587401/article/details/50877828
@@ -78,3 +84,6 @@ https://blog.csdn.net/u011587401/article/details/50877828
 update: 11/12
 make chessboard large
 (considering adding a go game)
+
+update: 15/12
+expand the chessboard to (16*16);

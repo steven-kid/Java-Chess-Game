@@ -4,9 +4,8 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="5e254d63-9b57-47f9-a437-ed4e18942f62" name="Changes" comment="&quot;Expand chessboard size &amp; Adding go game logic&quot;">
+    <list default="true" id="5e254d63-9b57-47f9-a437-ed4e18942f62" name="Changes" comment="Implement the render logic(still some bugs on corner case)🎯">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/GameEntrance.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/GameEntrance.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/GoGameVaildator.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/GoGameVaildator.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/GoNormalGame.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/GoNormalGame.java" afterDir="false" />
     </list>
@@ -131,7 +130,8 @@
       <workItem from="1670832750722" duration="43000" />
       <workItem from="1670843620538" duration="1614000" />
       <workItem from="1670896318171" duration="16050000" />
-      <workItem from="1671013086867" duration="9615000" />
+      <workItem from="1671013086867" duration="10976000" />
+      <workItem from="1671089335924" duration="5331000" />
     </task>
     <task id="LOCAL-00001" summary="&quot;🤺&quot;">
       <created>1670398164751</created>
@@ -154,7 +154,14 @@
       <option name="project" value="LOCAL" />
       <updated>1670923031638</updated>
     </task>
-    <option name="localTasksCounter" value="4" />
+    <task id="LOCAL-00004" summary="Implement the render logic(still some bugs on corner case)🎯">
+      <created>1671031757805</created>
+      <option name="number" value="00004" />
+      <option name="presentableId" value="LOCAL-00004" />
+      <option name="project" value="LOCAL" />
+      <updated>1671031757805</updated>
+    </task>
+    <option name="localTasksCounter" value="5" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -175,6 +182,7 @@
     <option name="ADD_EXTERNAL_FILES_SILENTLY" value="true" />
     <MESSAGE value="&quot;&quot;" />
     <MESSAGE value="&quot;Expand chessboard size &amp; Adding go game logic&quot;" />
-    <option name="LAST_COMMIT_MESSAGE" value="&quot;Expand chessboard size &amp; Adding go game logic&quot;" />
+    <MESSAGE value="Implement the render logic(still some bugs on corner case)" />
+    <option name="LAST_COMMIT_MESSAGE" value="Implement the render logic(still some bugs on corner case)" />
   </component>
 </project>

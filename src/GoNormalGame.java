@@ -12,12 +12,14 @@ public class GoNormalGame {
     private static GoGameVaildator validator = null;
 
     private static int[] setFather = new int[16 * 16];
+    private static int[] setQiSize = new int[16*16];
+
+    private static int[] setSize = new int[16*16];
 
     private static final int[] dx = {1, 0, -1, 0};
 
     private static final int[] dy = {0, 1, 0, -1};
 
-    private static int[] setQiSize = new int[16*16];
 
     private static boolean[] eaten = new boolean[16 * 16];
 
@@ -47,7 +49,7 @@ public class GoNormalGame {
         System.out.println("SetQiState");
         for (int i = 0; i < 16; i ++ ){
             for (int j = 0 ;j < 16; j ++){
-                System.out.printf("%3d ",setQiSize[i * 16 + j]);
+                System.out.printf("%3d ",chess.state[i * 16 + j]);
             }
             System.out.println("");
         }
@@ -58,6 +60,7 @@ public class GoNormalGame {
         int fb = findSet(b);
         // fine set Qi
         if(fa != fb){
+            setSize[fb] += setSize[fa];
             setQiSize[fb] = setQiSize[fa] + setQiSize[fb] - 2;
             setFather[fa] = fb;
         }
@@ -71,8 +74,23 @@ public class GoNormalGame {
             if(findSet(i) == x){
                 // set empty background
                 chess.buttons[i].setIcon(null);
+                // add back qi near
+                for (int j = 0; j < 4; j ++){
+                    int tempx = i / 16, tempy = i % 16;
+                    int newx = tempx + dx[j], newy = tempy + dy[j];
+                    int newIndex = newx * 16 + newy;
+                    if(newIndex >= 0  && newIndex < 16 * 16){
+                        setQiSize[findSet(newIndex)] ++;
+                    }
+                }
+                // set back to nothing
+                chess.state[i] = -1;
+                setFather[i] = i;
+                setQiSize[i] = 4;
+                setSize[i] = 1;
             }
         }
+        setQiSize[x] = 4;
     }
     private MouseListener hover = new MouseListener() {
         public void mouseClicked(MouseEvent e) {}
@@ -85,6 +103,10 @@ public class GoNormalGame {
             JButton temp = (JButton) e.getSource();
             // get the index
             int tempIndex = chess.btnToInt.get(temp);
+            // check if the key is able to play here
+            if(setSize[findSet(tempIndex)] > 1 && eaten[findSet(tempIndex)]){
+
+            }
             // able to play here
             if (chess.state[tempIndex] == -1 && (!end)) {
                 ImageIcon icon = new ImageIcon();
@@ -120,6 +142,10 @@ public class GoNormalGame {
                     JOptionPane.showMessageDialog(null,"Same situation occur before", "ERROR", JOptionPane.ERROR_MESSAGE);
                     return;
                 }
+                if(validator.checkSuicide(chess.state, tempIndex, currentPlayer)){
+                    JOptionPane.showMessageDialog(null,"No suicide", "ERROR", JOptionPane.ERROR_MESSAGE);
+                    return;
+                }
                 // set player
                 chess.state[tempIndex] = currentPlayer;
                 ImageIcon icon = new ImageIcon();
@@ -149,10 +175,13 @@ public class GoNormalGame {
                         }
                     }
                 }
-                printSetFatherState();
+//                printSetFatherState();
                 printSetQiState();
                 Image temp1 = icon.getImage().getScaledInstance(43, 43, Image.SCALE_DEFAULT);
                 icon = new ImageIcon(temp1);
+                // add temporary state into hash table
+                validator.update(chess.state);
+                System.out.println("update");
                 chess.buttons[tempIndex].setIcon(icon);
                 chess.repaint();
                 currentPlayer ^= 1;
@@ -183,6 +212,7 @@ public class GoNormalGame {
         for (int i = 0; i < 16*16; i ++) {
             // initialize union
             setFather[i] = i;
+            setSize[i] = 1;
             chess.buttons[i].addActionListener(click);
             chess.buttons[i].addMouseListener(hover);
         }
